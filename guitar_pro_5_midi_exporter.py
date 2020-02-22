@@ -8,20 +8,28 @@ from os import getenv
 # keyboard.all_modifiers = {'alt', 'alt gr', 'ctrl', 'left alt', 'left ctrl', 
 # 'left shift', 'left windows', 'right alt', 'right ctrl', 'right shift', 'right windows', 'shift', 'windows'}
 
-#midi_file_path = input("Please enter file path for the MIDI file:\n") 
-#C:\Users\allum\Dropbox\Piano\PDF\Pop\sovitukset\Everybody (Backstreet Boys)\Everybody (Backstreet Boys) (Bbm).mid
-print(os.environ)
+midi_file_path = input("Please enter file path (including the file name) for the MIDI file:\n") 
+# 
+# print(os.environ)
+# print(getenv("GP5_FILE_LOCATION"))
 
-#print(getenv(GP5_file_location))
+keyboard.press_and_release('left windows + r')
+time.sleep(2)
+keyboard.write(getenv("GP5_file_location"), delay=0.02)
+keyboard.press_and_release('enter')
+time.sleep(10)
+keyboard.press_and_release('ctrl + o')
+keyboard.write(midi_file_path)
+keyboard.press_and_release('enter')
+time.sleep(2)
 
-# keyboard.press_and_release('left windows + r')
-# time.sleep(2)
-# #keyboard.write(getenv("GP5_file_location"), delay=0.02)
-# keyboard.press_and_release('enter')
-# time.sleep(10)
-# keyboard.press_and_release('ctrl + o')
-# keyboard.write(midi_file_path)
-# keyboard.press_and_release('enter')
+pyautogui.press('tab', presses=5) # select "import"
+keyboard.press_and_release('enter')
+
+# Mouse click on the "import" window --> "alt + c" to close the window
+
+# Press "alt" and select "Track" with the arrow keys
+
 
 '''
 # Examples
