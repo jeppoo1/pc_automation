@@ -1,7 +1,9 @@
 from docx import Document
 import os
 
-# If you don't have bdfr (https://github.com/aliparlakci/bulk-downloader-for-reddit), install it with pip install bdfr
+########################################################################################################################
+# If you don't have bdfr (https://github.com/aliparlakci/bulk-downloader-for-reddit), install it with pip install bdfr #
+########################################################################################################################
 
 # First run the following command on the command line to download the stories as separate text files in a folder:
 ### py -m bdfr download C:\Users\your_user_name\your_folder\another_folder\reddit_TFTS\ --subreddit 'talesfromtechsupport' -S top -t all --file-scheme '{REDDITOR}_{TITLE}_{POSTID}_{DATE}' --make-hard-links
